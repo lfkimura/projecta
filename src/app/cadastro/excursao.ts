@@ -4,9 +4,9 @@ export class Excursao {
     public nome: string,
     public local: string,
     public vagas: number,
-    public data: date,
+    public data: string,
     public tipo: string,
-    public preco: string,
+    public preco: number,
     public extras?: string
   ) {  }
 }
