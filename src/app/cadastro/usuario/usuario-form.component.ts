@@ -13,9 +13,13 @@ export class UsuarioFormComponent {
   model = new Usuario(1, 'Dr Kimura','lfkimura@gmail.com','luis', this.perfis[0]);
 
   submitted = false;
-
-  onSubmit() { this.submitted = true; }
+  
+  onSubmit() { this.submitted = true;console.log(this.submitted) }
 
   // TODO: Remove this when we're done
   get diagnostic() { return JSON.stringify(this.model); }
+
+  novoUsuario() {
+    this.model = new Usuario(1, 'Dr','lfkimura@gmail.com','luis', this.perfis[0]);
+  }
 }

@@ -1,10 +1,15 @@
 <div class="container">
+  <div [hidden]="submitted">
+    
     <h1>Usuario Form</h1>
-    <form>
+    <form  (ngSubmit)="onSubmit()" #usuarioForm="ngForm">
       <div class="form-group">
         <label for="nome">Nome</label>
-        <input type="text" class="form-control" id="nome" [(ngModel)]="model.nome" name="nome" required>
-        TODO: remove this: {{model.nome}}
+        <input type="text" class="form-control" id="nome" [(ngModel)]="model.nome" name="nome" #name="ngModel" required>
+        <div [hidden]="name.valid || name.pristine"
+             class="alert alert-danger">
+          Name is required
+        </div>
       </div>
       <div class="form-group">
         <label for="email">email</label>
@@ -20,6 +25,24 @@
             <option *ngFor="let perfil of perfis" [value]="model.perfil">{{perfil}}</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-success">Submit</button>
+      <button type="submit" class="btn btn-success" [disabled]="!usuarioForm.form.valid">Submit</button>
     </form>
+  </div>
+  <div [hidden]="!submitted">
+  <h2>You submitted the following:</h2>
+    <div class="row">
+      <div class="col-xs-3">Name</div>
+      <div class="col-xs-9  pull-left">{{ model.nome }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Email</div>
+      <div class="col-xs-9 pull-left">{{ model.email }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Tipo</div>
+      <div class="col-xs-9 pull-left">{{ model.perfil }}</div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+  </div>
 </div>

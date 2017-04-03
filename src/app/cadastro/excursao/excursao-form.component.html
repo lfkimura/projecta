@@ -1,6 +1,6 @@
 <div class="container">
     <h1>Evento Form</h1>
-    <form>
+    <form name="excursao-form">
       <div class="form-group">
         <label for="nome">Nome</label>
         <input type="text" class="form-control" id="nome" [(ngModel)]="model.nome" required>
@@ -32,6 +32,6 @@
         <label for="alterEgo">Adicionais</label>
         <input type="text" class="form-control" id="extras" [(ngModel)]="model.extras" name="extras">
       </div>
-      <button type="submit" class="btn btn-success">Submit</button>
+      <button type="button" class="btn btn-default" (click)="novaExcursao(); excursaoForm.reset()">Nova Excursao</button>
     </form>
 </div>
