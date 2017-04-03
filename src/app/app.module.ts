@@ -5,8 +5,8 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppComponent }  from './app.component';
 
-import { UsuarioFormComponent } from './cadastro/usuario-form.component';
-import { ExcursaoFormComponent } from './cadastro/excursao-form.component';
+import { UsuarioFormComponent } from './cadastro/usuario/usuario-form.component';
+import { ExcursaoFormComponent } from './cadastro/excursao/excursao-form.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],

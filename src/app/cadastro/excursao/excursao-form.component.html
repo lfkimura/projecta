@@ -8,29 +8,29 @@
       </div>
       <div class="form-group">
         <label for="name">local</label>
-        <input type="text" class="form-control" id="local" required>
+        <input type="text" class="form-control" id="local"  [(ngModel)]="model.local" name="local" required>
       </div>
       <div class="form-group">
         <label for="name">Vagas</label>
-        <input type="text" class="form-control" id="vagas" required>
+        <input type="text" class="form-control" id="vagas" [(ngModel)]="model.vagas" name="vagas"  required>
       </div>
       <div class="form-group">
         <label for="name">Data</label>
-        <input type="text" class="form-control" id="data" required>
+        <input type="text" class="form-control" id="data" [(ngModel)]="model.data" name="data"  required>
       </div>
       <div class="form-group">
         <label for="tipo">Tipo</label>
-        <select class="form-control" id="tipo" required>
+        <select class="form-control" id="tipo"  [(ngModel)]="model.tipo" name="tipo" required>
             <option *ngFor="let tipo of tipos" [value]="tipo">{{tipo}}</option>
         </select>
       </div>
       <div class="form-group">
         <label for="name">Preco</label>
-        <input type="text" class="form-control" id="preco" required>
+        <input type="text" class="form-control" id="preco"  [(ngModel)]="model.preco" name="preco" required>
       </div>
       <div class="form-group">
         <label for="alterEgo">Adicionais</label>
-        <input type="text" class="form-control" id="extras">
+        <input type="text" class="form-control" id="extras" [(ngModel)]="model.extras" name="extras">
       </div>
       <button type="submit" class="btn btn-success">Submit</button>
     </form>
