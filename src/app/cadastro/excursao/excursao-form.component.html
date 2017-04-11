@@ -3,19 +3,19 @@
     <form name="excursao-form">
       <div class="form-group">
         <label for="nome">Nome</label>
-        <input type="text" class="form-control" id="nome" [(ngModel)]="model.nome" required>
+        <input type="text" class="form-control" id="nome" [(ngModel)]="model.nome" name="nome" required>
         TODO: remove this: {{model.nome}}
       </div>
       <div class="form-group">
-        <label for="name">local</label>
+        <label for="local">local</label>
         <input type="text" class="form-control" id="local"  [(ngModel)]="model.local" name="local" required>
       </div>
       <div class="form-group">
-        <label for="name">Vagas</label>
+        <label for="vagas">Vagas</label>
         <input type="text" class="form-control" id="vagas" [(ngModel)]="model.vagas" name="vagas"  required>
       </div>
       <div class="form-group">
-        <label for="name">Data</label>
+        <label for="data">Data</label>
         <input type="text" class="form-control" id="data" [(ngModel)]="model.data" name="data"  required>
       </div>
       <div class="form-group">
@@ -25,7 +25,7 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="name">Preco</label>
+        <label for="preco">Preco</label>
         <input type="text" class="form-control" id="preco"  [(ngModel)]="model.preco" name="preco" required>
       </div>
       <div class="form-group">
